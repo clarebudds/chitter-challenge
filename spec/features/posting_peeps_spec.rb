@@ -6,7 +6,7 @@ feature 'Posting peeps' do
     fill_in 'peep', with: "This is a new peep"
     click_button('Submit Peep')
     expect(current_path).to eq '/peeps'
-    expect(page).to have_content 'This is my first peep'
+    expect(page).to have_content 'This is a new peep'
   end
 end
 

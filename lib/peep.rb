@@ -9,7 +9,7 @@ class Peep
       connection = PG.connect(dbname: 'chitter')
     end
 
-    result = connection.exec("SELECT * FROM peeps")
+    result = connection.exec("SELECT * FROM peeps;")
     result.map do |chitter|
       chitter['peep']
     end
@@ -22,7 +22,6 @@ class Peep
       connection = PG.connect(dbname: 'chitter')
     end
 
-    connection.exec("INSERT INTO peeps (peep] VALUES ('#{peep}');")
-    
+    connection.exec("INSERT INTO peeps (peep) VALUES ('#{peep}');")
   end
-end
+end 
